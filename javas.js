@@ -14,9 +14,8 @@ function computerChoice(n) {
     } else {
 
         return("scissors");
-
     }
-};
+}
 
 function whoWins(computerChoice,userChoice){
 
@@ -27,38 +26,37 @@ function whoWins(computerChoice,userChoice){
         return ("You both picked "+computerChoice(n)+"! You tied :\(")
     } else {
         
-        console.log("The Computer picked "+computerChoice(n))
         console.log("You picked "+userChoice)
+        console.log("The Computer picked "+computerChoice(n))
     }
 
-    switch(computerChoice(n),userChoice){
+    switch(computerChoice(n)){
         
-
-        case (computerChoice=="rock",userChoice=="scissors"):
-            return("Rock crushes Scissors. The computer won!");
+        case ("rock"):
+            if(userChoice=="scissors"){
+                return("Rock crushes Scissors. The computer won!");
+            }else{
+                return("Paper covers Rock. You won!");
+            }
             break;
+        
+        case ("scissors"):
+            if (userChoice=="rock"){
+                return("Rock crushes Scissors. You won!");
 
-        case (computerChoice=="rock",userChoice=="paper"):
-            return("Paper covers Rock. You won!");
+            }else{
+                return("Scissors cuts Paper. The computer won!");
+            }
             break;
-    
-        case (computerChoice=="scissors",userChoice=="rock"):
-            return("Rock crushes Scissors. You won!");
-            break;
-  
-        case (computerChoice=="scissors",userChoice=="paper"):
-            return("Scissors cuts Paper. The computer won!");
-            break;
+         
+        case ("paper"):
+            if (userChoice=="scissors"){
+                return("Scissors cuts Paper. You won!");
 
-
-        case (computerChoice=="paper",userChoice=="scissors"):
-            return("Scissors cuts Paper. You won!");
+            }else{
+                return("Paper covers Rock. The computer won!");
+            }
             break;
-
-        case (computerChoice=="paper",userChoice=="rock"):
-            return("Paper covers Rock. The computer won!");
-            break;
-
     }
 }
 
