@@ -1,0 +1,51 @@
+body{
+    background-color: rgb(92, 22, 22);
+
+}
+
+.content{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+.rps{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+input{
+    width: 150px;
+    height: 150px;
+    box-shadow:
+    0 0 1px 3px #000000,
+    0 0 0 0px rgba(128, 42, 42, .98);
+    padding: 15px;
+}
+
+.highlightComputerPick{
+    transform: scale(1.1,1.1);
+    box-shadow: 
+    0 0 1px 3px #000000,
+    0px 0px 5px 6px #30c412;
+}
+
+.highlightUserPick{
+    transform: scale(1.1,1.1);
+    box-shadow: 
+    0 0 1px 3px #000000,
+    0px 0px 5px 5px #ffffff;
+                
+}
+
+
+#resultado{
+    padding-top: 100px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    font-size: 25px;
+}
+
+
